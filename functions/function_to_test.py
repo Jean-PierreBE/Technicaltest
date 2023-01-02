@@ -5,7 +5,7 @@ def parse_to_roman(num_arabe):
 
     if num_arabe > 5999:
         print("nombre trop grand")
-    elif(num_arabe < 0):
+    elif(num_arabe <= 0):
         print("nombre négatif")
     else:
         for ind in range(len(arabe)):
