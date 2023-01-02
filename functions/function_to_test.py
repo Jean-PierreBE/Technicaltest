@@ -8,14 +8,9 @@ def parse_to_roman(num_arabe):
     elif(num_arabe < 0):
         print("nombre négatif")
     else:
-        while num_arabe >= arabe[0]:
-            result = result + roman[0]
-            num_arabe = num_arabe - arabe[0]
-        while num_arabe >= arabe[1]:
-            result = result + roman[1]
-            num_arabe = num_arabe - arabe[1]
-        while num_arabe >= arabe[2]:
-            result = result + roman[2]
-            num_arabe = num_arabe - arabe[2]
+        for ind in range(len(arabe)):
+            while num_arabe >= arabe[ind]:
+                result = result + roman[ind]
+                num_arabe = num_arabe - arabe[ind]
 
         print(result)
