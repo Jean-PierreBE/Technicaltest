@@ -53,3 +53,28 @@ def binary_gap(number):
         return 0
     else:
         return max(num_zero)
+
+def rotate_array(array, numrot):
+    if array == []:
+        new_array = []
+    else:
+        new_array = [0] * len(array)
+        if numrot > len(array):
+            new_rot = numrot % len(array)
+        else:
+            new_rot = numrot
+        for ind in range(len(array)):
+            new_ind = ind + new_rot
+            if new_ind > len(array) - 1:
+                new_ind = new_ind - len(array)
+            new_array[new_ind] = array[ind]
+    return new_array
+
+def unpaired(A):
+
+    for ind in range(len(A)):
+        if A.count(A[ind]) == 1:
+            return A[ind]
+
+    return 0
+
